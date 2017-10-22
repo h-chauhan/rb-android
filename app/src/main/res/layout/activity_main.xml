@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:textSize="56sp"
+        android:fontFamily="sans-serif-light"
+        android:text="Menu"
+        android:layout_height="wrap_content" />
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#F5F5F5"/>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:id="@+id/categoryList">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/basket"/>
+</LinearLayout>

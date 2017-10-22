@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerItem"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="#FFF"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/rName"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rLayoutH">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/rqtyLayoutH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Half: "
+                android:textStyle="bold"
+                android:id="@+id/textView5" />
+
+            <Button
+                android:id="@+id/rMinusBtnH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:textColor="#fff"
+                android:backgroundTint="@color/colorAccent"
+                android:minHeight="0.0dip"
+                android:text="-"
+                style="?android:attr/buttonStyleSmall" />
+
+            <TextView
+                android:id="@+id/rLiQtyH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:minHeight="0.0dip"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/rPlusBtnH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:textColor="#fff"
+                android:backgroundTint="@color/colorAccent"
+                android:minHeight="0.0dip"
+                android:text="+"
+                style="?android:attr/buttonStyleSmall" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rItemPriceH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Half-Price"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rqtyLayoutH"
+            android:layout_toEndOf="@+id/rqtyLayoutH" />
+
+        <TextView
+            android:id="@+id/rItemAmtH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Half-Amount"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rLayoutF">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/rqtyLayoutF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full:  "
+                android:textStyle="bold"
+                android:id="@+id/textView6" />
+
+            <Button
+                android:id="@+id/rMinusBtnF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:minHeight="0.0dip"
+                android:text="-"
+                android:textColor="#fff"
+                android:backgroundTint="@color/colorAccent"
+                style="?android:attr/buttonStyleSmall" />
+
+            <TextView
+                android:id="@+id/rLiQtyF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:minHeight="0.0dip"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/rPlusBtnF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:minHeight="0.0dip"
+                android:textColor="#fff"
+                android:backgroundTint="@color/colorAccent"
+                android:text="+"
+                style="?android:attr/buttonStyleSmall" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rItemPriceF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full-Price"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rqtyLayoutF"
+            android:layout_toEndOf="@+id/rqtyLayoutF" />
+
+        <TextView
+            android:id="@+id/rItemAmtF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full-Amount"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Rajbhog</string>
+    <string name="ViewCart">View Cart</string>
+    <string name="Delivery">
+        Delivery
+    </string>
+    <string name="DeliveryDetails">
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        Your order will be delivered to your address.
+    </string>
+    <string name="BookTable">Book A Table</string>
+    <string name="PickUp">Pick Up</string>
+    <string name="PickUpDetails">
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        You will pick up the order yourself at restaurant.
+    </string>
+
+</resources>
