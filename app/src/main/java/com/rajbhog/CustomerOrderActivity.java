@@ -17,6 +17,8 @@ import com.rajbhog.POJO.Basket;
 import com.rajbhog.POJO.Item;
 import com.rajbhog.POJO.Order;
 
+import java.math.BigInteger;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,7 +42,7 @@ public class CustomerOrderActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fab.setEnabled(false);
+//                fab.setEnabled(false);
                 String str1 = ((TextView) findViewById(R.id.username)).
                         getText().toString();
                 String str2 = ((TextView) findViewById(R.id.userphone)).
@@ -53,6 +55,10 @@ public class CustomerOrderActivity extends AppCompatActivity {
                 } else if (str2.equals("")) {
                     ((TextView) findViewById(R.id.userphone))
                             .setError("Phone is required!");
+                } else if (Long.parseLong(str2) < 7000000000L
+                        || Long.parseLong(str2) > 9999999999L ) {
+                    ((TextView) findViewById(R.id.userphone))
+                            .setError("Phone Number is invalid!");
                 } else {
                     order.setUsername(str1);
                     order.setPhone(Long.parseLong(str2));
