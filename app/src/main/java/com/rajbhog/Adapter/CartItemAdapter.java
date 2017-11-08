@@ -18,6 +18,8 @@ import com.rajbhog.R;
 
 public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.CartItemHolder> {
     private final TextView totalTextView;
+    private final TextView subtotalView;
+    private final TextView taxView;
     Product product;
     private TextView name, priceH, qtyH, amtH, priceF, qtyF, amtF;
     private Button minusBtnH, plusBtnH, minusBtnF, plusBtnF;
@@ -25,8 +27,11 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.CartIt
     int intQtyH, intQtyF;
     private final Context context;
 
-    public CartItemAdapter(Context context, TextView totalTextView) {
+    public CartItemAdapter(Context context, TextView subtotalView,
+                           TextView taxView, TextView totalTextView) {
         this.context = context;
+        this.subtotalView = subtotalView;
+        this.taxView = taxView;
         this.totalTextView = totalTextView;
     }
 
@@ -121,6 +126,12 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.CartIt
         amtH.setText("₹ " + String.valueOf(intAmtH));
         amtF.setText("₹ " + String.valueOf(intAmtF));
         totalTextView.setText("Total: ₹ " + String.valueOf(Basket.getTotalAmount()));
+        int subtotal = Basket.getTotalAmount();
+        int tax = (18 * subtotal) / 100;
+        int total = subtotal + tax;
+        subtotalView.setText("Subtotal: ₹ " + String.valueOf(subtotal));
+        taxView.setText("GST@18%: ₹ " + String.valueOf(tax));
+        totalTextView.setText("Total: ₹ " + String.valueOf(total));
     }
 
     private void initialize(RecyclerView.ViewHolder holder, int position) {

@@ -30,13 +30,21 @@ public class PostOrderActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        int subtotal = Basket.getTotalAmount();
+        int tax = (18 * subtotal) / 100;
+        int total = subtotal + tax;
+        TextView subtotalView = (TextView) findViewById(R.id.subtotal);
+        subtotalView.setText("Subtotal: ₹ " + String.valueOf(subtotal));
+        TextView taxView = (TextView) findViewById(R.id.tax);
+        taxView.setText("GST@18%: ₹ " + String.valueOf(tax));
         TextView totalTextView = (TextView) findViewById(R.id.total);
-        totalTextView.setText("Total: ₹ " + String.valueOf(Basket.getTotalAmount()));
+        totalTextView.setText("Total: ₹ " + String.valueOf(total));
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.cart_item_list);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        RecyclerView.Adapter adapter = new CartItemAdapter(this, totalTextView);
+        RecyclerView.Adapter adapter = new CartItemAdapter(this, subtotalView,
+                taxView, totalTextView);
         recyclerView.setAdapter(adapter);
     }
 }

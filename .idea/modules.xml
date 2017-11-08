@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Rajbhog.iml" filepath="$PROJECT_DIR$/Rajbhog.iml" />
+      <module fileurl="file://C:\Users\Himanshu\Documents\GitHub\rb-android\Rajbhog.iml" filepath="C:\Users\Himanshu\Documents\GitHub\rb-android\Rajbhog.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rb-android.iml" filepath="$PROJECT_DIR$/rb-android.iml" />
     </modules>
   </component>
 </project>

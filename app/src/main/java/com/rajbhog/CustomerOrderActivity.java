@@ -56,7 +56,7 @@ public class CustomerOrderActivity extends AppCompatActivity {
                 } else {
                     order.setUsername(str1);
                     order.setPhone(Long.parseLong(str2));
-                    order.setAmount(Basket.getTotalAmount());
+                    order.setAmount((118 * Basket.getTotalAmount())/100);
 
                     if(order.getType().equals("Delivery") && str3.equals("")) {
                         ((TextView) findViewById(R.id.useraddress))
